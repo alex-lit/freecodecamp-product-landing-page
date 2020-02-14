@@ -1,3 +1,6 @@
+{% from 'components/app-header/app-header.template.njk' import AppHeader %}
+{% from 'components/app-footer/app-footer.template.njk' import AppFooter %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,9 +10,11 @@
   </head>
   <body>
     <main id="main">
+      {{ AppHeader() }}
 
       {% block page %}{% endblock %}
 
+      {{ AppFooter() }}
     </main>
 
     <script src="../main.ts"></script>

@@ -1,8 +1,13 @@
 {% extends "layouts/default.njk" %}
 
-{% from 'components/app-container/app-container.template.njk' import AppContainer %}
-{% from 'components/survey-form/survey-form.template.njk' import SurveyForm %}
+{% from 'components/app-search/app-search.template.njk' import AppSearch %}
+{% from 'components/why-us/why-us.template.njk' import WhyUs %}
+{% from 'components/promo-video/promo-video.template.njk' import PromoVideo %}
+{% from 'components/prices-section/prices-section.template.njk' import PricesSection %}
 
 {% block page %}
-    {{ AppContainer( defaultSlot = SurveyForm() ) }}
+    {{ AppSearch() }}
+    {{ WhyUs() }}
+    {{ PromoVideo() }}
+    {{ PricesSection() }}
 {% endblock %}
